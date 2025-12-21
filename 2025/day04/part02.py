@@ -19,7 +19,7 @@ def main():
     stop = False
 
     while stop == False:
-        
+
         stop = True
 
         # detectar cuales eliminar
@@ -57,17 +57,10 @@ def main():
                         stop = False
 
                         row = list(lines[r])
-                        row[c] = 'x'
+                        row[c] = '.'
                         lines[r] = ''.join(row)
 
-            if stop == False:
-                for r in range(len(lines)):
-                    for c in range(len(lines[r])):
-                        if lines[r][c] == 'x':
-                            row = list(lines[r])
-                            row[c] = '.'
-                            lines[r] = ''.join(row)
-                            removed_rolls += 1
+                        removed_rolls += 1
 
     print(removed_rolls)
     return removed_rolls
